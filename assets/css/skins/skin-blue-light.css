@@ -93,12 +93,14 @@
 }
 
 .skin-blue-light .sidebar-menu > li.header {
-    color: #848484;
+    color: #444444;
     background: #f9fafc;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .skin-blue-light .sidebar-menu > li > a {
-/*    border-left: 3px solid transparent;*/
+    /*    border-left: 3px solid transparent;*/
     font-weight: 600;
 }
 
@@ -183,7 +185,7 @@
 
 @media (min-width: 768px) {
     .skin-blue-light.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
-/*        border-left: 1px solid #d2d6de;*/
+        /*        border-left: 1px solid #d2d6de;*/
     }
 }
 

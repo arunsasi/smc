@@ -1949,11 +1949,9 @@ a:focus {
     border-top: 0;
 }
 
-/*
 .box.box-solid > .box-header .btn.btn-default {
     background: transparent;
 }
-*/
 
 .box.box-solid > .box-header .btn:hover,
 .box.box-solid > .box-header a:hover {
@@ -2156,6 +2154,7 @@ a:focus {
     position: absolute;
     right: 7px;
     top: 5px;
+    display: inline-flex;
 }
 
 .box-header > .box-tools [data-toggle="tooltip"] {
@@ -6001,7 +6000,7 @@ table th {
     color: #444444;
     border-bottom: 1px solid #f4f4f4;
     display: block;
-    padding: 8px;
+    padding: 9px 8px;
 }
 
 .recent-critical-updates-list a:hover {
@@ -6010,6 +6009,7 @@ table th {
 
 .recent-critical-updates-list a p {
     margin: 0;
+    clear: both;
 }
 
 .recent-critical-updates-list a > i {
@@ -6020,7 +6020,7 @@ table th {
 }
 
 .recent-critical-updates-list a > h4 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -6031,7 +6031,7 @@ table th {
 }
 
 .recent-critical-updates-list a > h4 {
-    margin: 0 0 5px 0;
+    margin: 0 0 1.5px 0;
 }
 
 .recent-hotlist-detection .tooltip-inner {
