@@ -7,7 +7,6 @@
     <title>Surat Municipal Corporation</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/icofont/icofont.min.css">
@@ -126,11 +125,20 @@
             <section class="sidebar">
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="header">Traffic Surveillance System</li>
-                    <li class="active"><a href="#"><i class="fas fa-desktop"></i> <span>Dashboard</span></a></li>
-                    <li><a href="#"><i class="fas fa-car"></i> <span>Hotlist Vehicles</span></a></li>
-                    <li><a href="#"><i class="fas fa-crosshairs"></i> <span>Vehicle Detections</span></a></li>
-                    <li><a href="#"><i class="fas fa-file-alt"></i> <span>ANPR Summary</span></a></li>
+
+                    <li class="active treeview menu-open">
+                        <a href="#"><i class="fas fa-traffic-light"></i> <span>Traffic Surveillance System</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fas fa-desktop"></i> Dashboard</a></li>
+                            <li><a href="#"><i class="fas fa-car"></i> Hotlist Vehicles</a></li>
+                            <li><a href="#"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> ANPR Summary</a></li>
+                        </ul>
+                    </li>
                     <li class="treeview">
                         <a href="#"><i class="fas fa-sliders-h"></i> <span>Configurations</span>
                             <span class="pull-right-container">
@@ -138,11 +146,11 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#">Time Configuration</a></li>
-                            <li><a href="#">Map Pointer Colour Configuration</a></li>
-                            <li><a href="#">Dashboard Map Pointer Colour Configuration</a></li>
-                            <li><a href="#">Other Configurations</a></li>
-                            <li><a href="#">Notification List</a></li>
+                            <li><a href="#"><i class="fas fa-clock"></i> Time Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
+                            <li><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
                         </ul>
                     </li>
                 </ul>

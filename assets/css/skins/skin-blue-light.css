@@ -120,6 +120,7 @@
 
 .skin-blue-light .sidebar-menu > li > .treeview-menu {
     background: #f4f4f5;
+    padding-left: 0;
 }
 
 .skin-blue-light .sidebar a {
