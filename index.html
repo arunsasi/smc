@@ -7,7 +7,6 @@
     <title>Surat Municipal Corporation</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/icofont/icofont.min.css">
@@ -126,10 +125,20 @@
             <section class="sidebar">
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="active"><a href="#"><i class="fas fa-desktop"></i> <span>Dashboard</span></a></li>
-                    <li><a href="#"><i class="fas fa-car"></i> <span>Hotlist Vehicles</span></a></li>
-                    <li><a href="#"><i class="fas fa-crosshairs"></i> <span>Vehicle Detections</span></a></li>
-                    <li><a href="#"><i class="fas fa-file-alt"></i> <span>ANPR Summary</span></a></li>
+
+                    <li class="active treeview menu-open">
+                        <a href="#"><i class="fas fa-traffic-light"></i> <span>Traffic Surveillance System</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fas fa-desktop"></i> Dashboard</a></li>
+                            <li><a href="#"><i class="fas fa-car"></i> Hotlist Vehicles</a></li>
+                            <li><a href="#"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> ANPR Summary</a></li>
+                        </ul>
+                    </li>
                     <li class="treeview">
                         <a href="#"><i class="fas fa-sliders-h"></i> <span>Configurations</span>
                             <span class="pull-right-container">
@@ -137,11 +146,11 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#">Time Configuration</a></li>
-                            <li><a href="#">Map Pointer Colour Configuration</a></li>
-                            <li><a href="#">Dashboard Map Pointer Colour Configuration</a></li>
-                            <li><a href="#">Other Configurations</a></li>
-                            <li><a href="#">Notification List</a></li>
+                            <li><a href="#"><i class="fas fa-clock"></i> Time Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
+                            <li><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -162,17 +171,19 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box  box-default box-solid">
+                        <div class="box box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Hotlist Vehicle Locations</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </button> </div>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body no-padding">
-
                                 <div class="embed-responsive embed-responsive-100x400px">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34190.191266882735!2d72.81272822696987!3d21.170868059432536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C+Gujarat!5e0!3m2!1sen!2sin!4v1556994725871!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
-                                <div class="map-legend-box">
+                                <div class="map-legend-box hidden">
                                     <ul class="map-legend-priority">
                                         <li><i class="fa fa-circle text-maroon"></i> Critical</li>
                                         <li><i class="fa fa-circle text-orange"></i> High</li>
@@ -188,86 +199,138 @@
                 <div class="row">
 
                     <div class="col-md-6">
-                        <div class="box box-default box-solid">
+                        <div class="box box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Recent Hotlist Detections</h3>
                                 <div class="box-tools">
                                     <a href="#" class="btn btn-block btn-sm btn-default btn-flat"> View All</a>
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </button>
                                 </div>
                             </div>
+                            <!-- /.box-header -->
                             <div class="box-body no-padding">
-                                <table id="tblData" class="table table-striped no-footer dataTable hotlistImgtable">
-                                    <thead>
-                                        <tr>
-                                            <th class="no-sort sorting_asc">Registration Number</th>
-                                            <th class="no-sort sorting">Colour</th>
-                                            <th class="no-sort sorting">Company</th>
-                                            <th class="no-sort sorting">Category</th>
-                                            <th class="no-sort center text-center">Image</th>
-                                            <th class="no-sort center text-center">Tracking</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>KL 01 M 6680</td>
-                                            <td>Red</td>
-                                            <td>Honda</td>
-                                            <td>Stolen</td>
-                                            <td class="text-center">
-                                                <img src="assets/img/car1.jpg" width="130" height="80" data-html="true" data-toggle="tooltip" title="" data-original-title="<p class='text-left'>Last Detected on:</br>28/02/2019 16:45:39 PM <br> Last Detected at:</br>Athwagate</p>" />
-                                            </td>
-                                            <td class="text-center">
-                                                <a class="i-cursordashbord"> <i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>KL 01 M 6680</td>
-                                            <td>Red</td>
-                                            <td>Honda</td>
-                                            <td>Stolen</td>
-                                            <td class="text-center">
-                                                <img src="assets/img/car1.jpg" width="130" height="80" data-html="true" data-toggle="tooltip" title="" data-original-title="<p class='text-left'>Last Detected on:</br>28/02/2019 16:45:39 PM <br> Last Detected at:</br>Athwagate</p>" />
-                                            </td>
-                                            <td class="text-center">
-                                                <a class="i-cursordashbord"> <i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>KL 01 M 6680</td>
-                                            <td>Red</td>
-                                            <td>Honda</td>
-                                            <td>Stolen</td>
-                                            <td class="text-center">
-                                                <img src="assets/img/car1.jpg" width="130" height="80" data-html="true" data-toggle="tooltip" title="" data-original-title="<p class='text-left'>Last Detected on:</br>28/02/2019 16:45:39 PM <br> Last Detected at:</br>Athwagate</p>" />
-                                            </td>
-                                            <td class="text-center">
-                                                <a class="i-cursordashbord"> <i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>KL 01 M 6680</td>
-                                            <td>Red</td>
-                                            <td>Hondass</td>
-                                            <td>Stolen</td>
-                                            <td class="text-center">
-                                                <img src="assets/img/car1.jpg" width="130" height="80" data-html="true" data-toggle="tooltip" title="" data-original-title="<p class='text-left'>Last Detected on:</br>28/02/2019 16:45:39 PM <br> Last Detected at:</br>Athwagate</p>" />
-                                            </td>
-                                            <td class="text-center">
-                                                <a class="i-cursordashbord"> <i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive">
+                                    <table id="tblData" class="table table-striped no-footer recent-hotlist-detection dataTable" role="grid" aria-describedby="tblData_info" style="">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="no-sort sorting_asc" style="width: 25%;">Registration Number</th>
+                                                <th class="no-sort sorting">Colour</th>
+                                                <th class="no-sort sorting">Company</th>
+                                                <th class="no-sort sorting">Category</th>
+                                                <th class="no-sort center text-center">Image</th>
+                                                <th class="no-sort center text-center">View Tracking</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Red</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;KKS7x/06m4Y=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="sorting_1"><span class="lb-centeralign">KL 01 M 6680</span></td>
+                                                <td>Green</td>
+                                                <td>Honda</td>
+                                                <td>Stolen</td>
+                                                <td class="text-center">
+                                                    <i class="fas fa-image imgtooltip" data-html="true" data-toggle="tooltip" data-placement="top" data-original-title="<div><img src=assets/img/car1.jpg /></div><p class='text-left'>Last Detected on: 28/02/2019 16:45:39 PM <br> Last Detected at: Athwagate</p>"></i>
+                                                <td class="text-center">
+                                                    <a class="i-cursordashbord" onclick="OpenTrackLog(&quot;8I0icKbzlBY=&quot;,&quot;KL01M6680&quot;)"><i class="fa fa-eye imgtooltip" title="Vehicle Tracking Log List"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                            <!-- /.box-body -->
+
                         </div>
                     </div>
+
+
                     <div class="col-md-6">
-                        <div class="box box-default box-solid">
+                        <div class="box box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Recent Critical Updates</h3>
                                 <div class="box-tools">
                                     <a href="#" class="btn btn-block btn-sm btn-default btn-flat"> View All</a>
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fa fa-minus"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="box-body no-padding">
