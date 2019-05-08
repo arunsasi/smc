@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Surat Municipal Corporation</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/icofont/icofont.min.css">
+    <link rel="stylesheet" href="assets/css/AdminLTE.css">
+    <link rel="stylesheet" href="assets/css/skins/skin-blue-light.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    <link rel="icon" type="image/png" href="assets/img/smc_logo.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<body class="hold-transition skin-blue-light sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <span class="logo-mini"></span>
+                <span class="logo-lg"></span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#!" onclick=" javascript:toggleFullScreen()"><i class="full-screen fa fa-expand"></i></a>
+                        </li>
+                        <!-- Notifications -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="far fa-bell"></i>
+                                <span class="label label-success">5</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">Recent Critical Update</li>
+                                <li>
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Vehicle is marked for showing in the map. Black Vehicle, Wanted Category</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 14 mins</small>
+                                                </h4>
+                                                <p>Vehicle tracking is enabled. Black Vehicle, Wanted Category</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 22 mins</small>
+                                                </h4>
+                                                <p>Green Vehicle, Wanted Category. Alert Issued by Surat Police</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 1 hr</small>
+                                                </h4>
+                                                <p>Green Vehicle, Wanted Category. Alert Issued by Surat Police</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 1 hr</small>
+                                                </h4>
+                                                <p>Green Vehicle, Wanted Category. Alert Issued by Surat Police</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h4>KL 01 CH 7071 <small><i class="fa fa-clock-o"></i> 1 hr</small>
+                                                </h4>
+                                                <p>Green Vehicle, Wanted Category. Alert Issued by Surat Police</p>
+                                            </a>
+                                        </li>
+
+                                        <!-- end notification -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">Alexander Pierce</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header"><a href="#" class=""><i class="icofont-user-alt-2"></i> My Profile</a></li>
+                                <li class="header"><a href="#" class=""><i class="icofont-logout"></i> Logout</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column -->
+        <aside class="main-sidebar">
+            <!-- sidebar -->
+            <section class="sidebar">
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+
+                    <li class="active treeview menu-open">
+                        <a href="#"><i class="fas fa-traffic-light"></i> <span>Traffic Surveillance System</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fas fa-desktop"></i> Dashboard</a></li>
+                            <li><a href="#"><i class="fas fa-car"></i> Hotlist Vehicles</a></li>
+                            <li><a href="#"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> ANPR Summary</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fas fa-sliders-h"></i> <span>Configurations</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fas fa-clock"></i> Time Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
+                            <li><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper-->
+        <div class="content-wrapper">
+            <!-- Content Header-->
+            <section class="content-header">
+                <h1>Manage Hotlist Vehicles</h1>
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fas fa-car-alt"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Hotlisted Vehicles</span>
+                                <span class="info-box-number">30</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-red"><i class="fas fa-bullseye"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Tracking Enabled Vehicles</span>
+                                <span class="info-box-number">410</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-yellow"><i class="far fa-flag"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Flagged Vehicles</span>
+                                <span class="info-box-number">18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Hotlist Vehicles List</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table id="hotlist-vehicles-table" class="table table-bordered table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Registration Number</th>
+                                                <th>Colour</th>
+                                                <th>Class</th>
+                                                <th>Priority</th>
+                                                <th>Category</th>
+                                                <th>Image</th>
+                                                <th>Tracking Start Date</th>
+                                                <th>Tracking End Date</th>
+                                                <th>Last Detected Date</th>
+                                                <th>Flagged</th>
+                                                <th>Tracking</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td align="center"></td>
+                                                <td>KL 01 EA 0001</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>12/04/2019</span></td>
+                                                <td><span>27/03/2019 12:32:05</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0002</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:06</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0003</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:06</span></td>
+                                                <td> No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"></td>
+                                                <td>KL 01 EA 0004</td>
+                                                <td> Black</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:06</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0005</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:06</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0006</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:07</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0007</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>28/03/2019</span></td>
+                                                <td><span>27/03/2019 12:32:07</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0008</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:08</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0009</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>28/03/2019</span></td>
+                                                <td><span>27/03/2019 12:32:08</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0010</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:09</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0011</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>28/12/2018 10:58:05</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0012</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>28/03/2019</span></td>
+                                                <td><span>27/03/2019 12:32:10</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"></td>
+                                                <td>KL 01 EA 0013</td>
+                                                <td> Green</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>28/12/2018 10:58:05</span></td>
+                                                <td>No</td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0014</td>
+                                                <td> Black</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:11</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0015</td>
+                                                <td> Red</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>27/03/2019 12:32:12</span></td>
+                                                <td>Yes</td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0016</td>
+                                                <td> Black</td>
+                                                <td>SUV</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td><span>21/03/2019 13:32:23</span></td>
+                                                <td>Yes </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0017</td>
+                                                <td> Black</td>
+                                                <td>Car</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>20/11/2018</span></td>
+                                                <td><span>08/03/2020</span></td>
+                                                <td></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0018</td>
+                                                <td> Red</td>
+                                                <td>suv</td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>25/03/2019</span></td>
+                                                <td><span>25/03/2020</span></td>
+                                                <td><span>07/05/2019 11:38:01</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>KL 01 EA 0019</td>
+                                                <td> Black</td>
+                                                <td></td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>25/03/2019</span></td>
+                                                <td><span>25/03/2020</span></td>
+                                                <td><span>07/05/2019 11:37:59</span></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox" checked="">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
+                                                <td>Kl 01 EA 0020</td>
+                                                <td> Green</td>
+                                                <td></td>
+                                                <td>Critical</td>
+                                                <td>Wanted</td>
+                                                <td></td>
+                                                <td><span>25/03/2019</span></td>
+                                                <td><span>28/03/2019</span></td>
+                                                <td></td>
+                                                <td>No </td>
+                                                <td class="text-center"><label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider round"></span></label></td>
+                                                <td class="action-icons">
+                                                    <a><i class="fa fa-eye" title="View"></i></a>
+                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
+                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
+                                                    <a><i class="fas fa-times" title="Delete"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                Version 1.0
+            </div>
+            Copyright &copy; 2019 <a href="#">ARS Traffic &amp; Transport Technology </a>.
+        </footer>
+
+    </div>
+    <!-- ./wrapper -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script src="assets/js/adminlte.min.js"></script>
+    <script src="assets/js/page.js"></script>
+</body>
+
+</html>
