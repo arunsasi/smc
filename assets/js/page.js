@@ -15,7 +15,17 @@ $(function () {
         $(e.parents(".box")).toggleClass("full-card"), $(this).toggleClass("icon-maximize"), $(this).toggleClass("icon-minimize")
     });
 
-    $('#hotlist-vehicles-table').DataTable();
+
+    //Hotlist Vehicle
+    $('#hotlist-vehicles-table').dataTable({
+        'columnDefs': [{
+            'orderable': false,
+            'targets': 0
+        }], // hide sort icon on header of first column
+        'aaSorting': [[1, 'asc']] // start to sort data in second column 
+    });
+
+
 });
 
 
