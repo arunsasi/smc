@@ -15,8 +15,6 @@ $(function () {
         $(e.parents(".box")).toggleClass("full-card"), $(this).toggleClass("icon-maximize"), $(this).toggleClass("icon-minimize")
     });
 
-
-
 });
 
 

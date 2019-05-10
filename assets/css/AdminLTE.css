@@ -5988,6 +5988,12 @@ table.text-center th {
 
 
 /*smc*/
+
+label {
+
+    font-weight: 600;
+}
+
 table.hotlistImgtable td {
     vertical-align: middle !important;
 }
@@ -6138,6 +6144,10 @@ input:checked + .slider:before {
 div.dataTables_wrapper div.dataTables_info {
     padding-top: 3px;
     white-space: nowrap;
+}
+
+.bg-white {
+    background: #ffffff !important;
 }
 
 /*
