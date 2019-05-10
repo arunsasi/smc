@@ -6037,8 +6037,8 @@ table th {
 
 .recent-critical-updates-list a > h4 > small {
     font-size: 13px;
-    position: absolute;
     right: 10px;
+    float: right
 }
 
 .recent-critical-updates-list a > h4 {
@@ -6073,9 +6073,9 @@ table th {
 .switch {
     position: relative;
     display: inline-block;
-    width: 52px;
-    height: 25px;
-    margin-bottom: 0;
+    width: 50px;
+    height: 23px;
+    margin: 0 8px 0 0;
 }
 
 .switch input {
@@ -6099,8 +6099,8 @@ table th {
 .slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -6133,6 +6133,11 @@ input:checked + .slider:before {
 .action-icons a {
     cursor: pointer;
     margin: 0 1px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 3px;
+    white-space: nowrap;
 }
 
 /*

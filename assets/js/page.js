@@ -18,6 +18,9 @@ $(function () {
 
     //Hotlist Vehicle
     $('#hotlist-vehicles-table').dataTable({
+
+        bFilter: false, //hide search box
+        "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
         'columnDefs': [{
             'orderable': false,
             'targets': 0
