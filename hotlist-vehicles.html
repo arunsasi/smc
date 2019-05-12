@@ -139,8 +139,9 @@
                         <ul class="treeview-menu">
                             <li><a href="index.html"><i class="fas fa-desktop"></i> Dashboard</a></li>
                             <li class="active"><a href="hotlist-vehicles.html"><i class="fas fa-car"></i> Hotlist Vehicles</a></li>
-                            <li><a href="#"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
+                            <li><a href="vehicles-detections.html"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
                             <li><a href="#"><i class="fas fa-file-alt"></i> ANPR Summary</a></li>
+                            <li><a href="audit-trail.html"><i class="fas fa-file-alt"></i> Audit Trail</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -1474,7 +1475,8 @@
             //Date Picker
             $('.input-group.date').datepicker({
                 autoclose: true,
-                todayBtn: "linked"
+                todayBtn: "linked",
+                format: "dd/mm/yyyy"
             });
             //Date range picker
             $('.daterangefilter').daterangepicker({

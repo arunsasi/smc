@@ -6248,6 +6248,10 @@ legend {
     transform-origin: right 2px 0px;
 }
 */
+.empty-lbl {
+    display: block;
+    min-height: 20px;
+}
 
 legend {
     font-size: 14px;
