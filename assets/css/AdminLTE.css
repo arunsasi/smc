@@ -2062,6 +2062,7 @@ a:focus {
 .box.box-solid > .box-header > .box-tools .btn {
     /*    border: 0;*/
     box-shadow: none;
+    font-weight: 600;
 }
 
 .box.box-solid[class*='bg'] > .box-header {
@@ -6051,19 +6052,27 @@ table th {
     margin: 0 0 1.5px 0;
 }
 
-.recent-hotlist-detection .tooltip-inner {
+.hotlist-img-tooltip .tooltip-inner {
     max-width: 320px;
-    /* If max-width does not work, try using width instead */
     width: 320px;
 }
 
-.recent-hotlist-detection .tooltip-inner img {
+.hotlist-img-tooltip .tooltip-inner img {
     margin: 6px 0;
 
 }
 
 .recent-hotlist-detection.table {
     margin-bottom: 8px;
+}
+
+.short-tooltip .tooltip-inner {
+    max-width: 180px;
+    width: 180px;
+}
+
+.short-tooltip .tooltip-inner p {
+    margin: 0;
 }
 
 .imgtooltip {
@@ -6235,6 +6244,20 @@ legend {
     padding: 0 0 5px 0;
 }
 
+.back-btn-header {
+    font-size: 16px;
+    padding: 0;
+}
+
+.back-btn-header:hover {
+    background: rgba(0, 0, 0, 0.0) !important;
+
+}
+
+.back-btn-header:hover i {
+    color: #be0131;
+}
+
 /*
 .zoomimg {
     -webkit-transition: all .2s ease-in-out;
@@ -6260,6 +6283,10 @@ legend {
     padding: 0 0 10px 0;
 }
 
+.mt-5 {
+    margin-top: 5px;
+}
+
 .ml-10 {
     margin-left: 10px !important;
 }
@@ -6268,6 +6295,20 @@ legend {
     margin-right: 10px !important;
 }
 
+.hideClick {
+    cursor: pointer;
+}
+
+.box-in-box {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 5px;
+    box-shadow: none;
+}
+
+.box-in-box .box-header {
+    padding: 7px 10px;
+}
 
 @media (min-width: 992px) {
     .modal-lg {
