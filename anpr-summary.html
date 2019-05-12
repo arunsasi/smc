@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel='stylesheet' href='assets/css/unite-gallery.css' type='text/css' />
+    <link rel='stylesheet' href='assets/themes/default/ug-theme-default.css' type='text/css' />
     <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/icofont/icofont.min.css">
     <link rel="stylesheet" href="assets/css/AdminLTE.css">
@@ -155,7 +157,7 @@
                             <li><a href="#"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
                             <li><a href="#"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
                             <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
-                            <li><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
+                            <li><a href="notification-list.html"><i class="fas fa-bell"></i> Notification List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -181,13 +183,11 @@
                             </div>
                             <div class="box-body">
                                 <div class="row">
-
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label id="lblRegNumber">Registration Number</label>
                                             <input type="text" id="txtRegNumber" placeholder="Registration Number" class="form-control inputmasks">
                                         </div>
-
                                     </div>
                                     <div class="col-sm-2">
                                         <div class="form-group">
@@ -244,6 +244,7 @@
                                 </div>
 
                             </div>
+                            <!-- ANPR Hour data-->
                             <div class="box-footer" id="anprHrData" style="display:block;">
                                 <div class="box box-default box-solid box-in-box">
                                     <div class="box-header">
@@ -319,19 +320,17 @@
                                         </tbody>
                                     </table>
                                 </div>
-
                             </div>
+                            <!-- Location Detail List-->
                             <div class="box-footer" id="locData" style="display: none;">
-
                                 <div class="box box-default box-solid box-in-box">
                                     <div class="box-header">
                                         <h3 class="box-title">Location Detail List</h3>
                                         <div class="box-tools pull-right short-tooltip">
-                                            <a href="#" class="back-btn-header showClick" data-html="true" data-toggle="tooltip" data-placement="left" data-original-title="<p class='text-left'>Back to Location Detail List</p
+                                            <a href="#" class="back-btn-header showClick" data-html="true" data-toggle="tooltip" data-placement="left" data-original-title="<p class='text-left'>Back to ANAPR Hour Data</p
                                                 >"><i class="fas fa-caret-square-left"></i></a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover" id="location-list-table">
@@ -357,7 +356,7 @@
                                                         <input type="checkbox" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -370,7 +369,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -383,7 +382,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -396,7 +395,7 @@
                                                         <input type="checkbox" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -409,7 +408,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -422,7 +421,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -435,7 +434,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -448,7 +447,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -461,7 +460,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -474,7 +473,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -487,7 +486,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -500,7 +499,7 @@
                                                         <input type="checkbox" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -513,7 +512,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -526,7 +525,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -539,7 +538,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -552,7 +551,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -565,7 +564,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -578,7 +577,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -591,7 +590,7 @@
                                                         <input type="checkbox" checked="" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -604,7 +603,7 @@
                                                         <input type="checkbox" disabled>
                                                         <span class="slider round"></span></label> </td>
                                                 <td class="action-icons">
-                                                    <a><i class="far fa-edit" title="Tracking Log"></i></a>
+                                                    <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -616,6 +615,92 @@
                     </div>
                 </div>
 
+                <!--Vehicle Tracking Details-->
+                <div class="modal fade" id="vehicleTracking" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Vehicle Tracking Details</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div id="gallery" style="display:none;">
+
+                                            <img alt="Preview Image 1" src="assets/images/thumbs/thumb1.jpg" data-image="assets/images/big/image1.jpg" data-description="Preview Image 1 Description">
+
+                                            <img alt="Preview Image 2" src="assets/images/thumbs/thumb2.jpg" data-image="assets/images/big/image2.jpg" data-description="Preview Image 2 Description">
+
+                                            <img alt="Preview Image 3" src="assets/images/thumbs/thumb3.jpg" data-image="assets/images/big/image3.jpg" data-description="Preview Image 3 Description">
+
+                                            <img alt="Preview Image 4" src="assets/images/thumbs/thumb4.jpg" data-image="assets/images/big/image4.jpg" data-description="Preview Image 4 Description">
+
+                                            <img alt="Preview Image 6" src="assets/images/thumbs/thumb2.jpg" data-image="assets/images/big/image2.jpg" data-description="Preview Image 6 Description">
+
+                                            <img alt="Preview Image 7" src="assets/images/thumbs/thumb3.jpg" data-image="assets/images/big/image3.jpg" data-description="Preview Image 7 Description">
+
+
+                                            <img alt="Preview Image 8" src="assets/images/thumbs/thumb4.jpg" data-image="assets/images/big/image4.jpg" data-description="Preview Image 8 Description">
+
+                                            <img alt="Preview Image 9" src="assets/images/thumbs/thumb1.jpg" data-image="assets/images/big/image1.jpg" data-description="Preview Image 9 Description">
+
+                                            <img alt="Preview Image 10" src="assets/images/thumbs/thumb2.jpg" data-image="assets/images/big/image2.jpg" data-description="Preview Image 10 Description">
+
+                                            <img alt="Preview Image 11" src="assets/images/thumbs/thumb3.jpg" data-image="assets/images/big/image3.jpg" data-description="Preview Image 11 Description">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+
+                                        <h4 class="sub-header">
+                                            Tracking Details
+                                        </h4>
+                                        <div class="thumbnail">
+                                            <img src="assets/img/car1.jpg" class="zoomimg">
+                                        </div>
+
+                                        <table class="table table-bordered table-striped bold-list-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Registration Number</td>
+                                                    <td class="text-red">KL-01-EA-0005</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Incident Type</td>
+                                                    <td>Non Hotlisted Vehicle</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colour</td>
+                                                    <td>BLACK</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Detected on</td>
+                                                    <td>28-08-2018 11:01:49.000 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Location</td>
+                                                    <td>Technopark</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Arm Name</td>
+                                                    <td>ARM12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Stream</td>
+                                                    <td>Forward</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
             <!-- /.content -->
@@ -640,6 +725,8 @@
     <script src="assets/js/input-mask/jquery.inputmask.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src='assets/js/unitegallery.min.js'></script>
+    <script src='assets/themes/default/ug-theme-default.js'></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/fastclick.js"></script>
     <script src="assets/js/adminlte.min.js"></script>
@@ -712,7 +799,7 @@
                     [1, 'asc']
                 ] // start to sort data in second column 
             });
-
+            //show hide list
             $(".hideClick").click(function() {
                 $("#anprHrData").hide();
                 $("#locData").slideDown();
@@ -721,7 +808,12 @@
                 $("#anprHrData").slideDown();
                 $("#locData").hide();
             });
-
+            //Gallery
+            jQuery("#gallery").unitegallery({
+                gallery_autoplay: false,
+                gallery_width: 900,
+                gallery_height: 750,
+            });
 
         })
 
