@@ -168,184 +168,80 @@
         <div class="content-wrapper">
             <!-- Content Header-->
             <section class="content-header">
-                <h1>Manage Hotlist Vehicles</h1>
+                <h1>Vehicle Tracking Logs </h1>
             </section>
 
             <!-- Main content -->
             <section class="content container-fluid">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-aqua"><i class="fas fa-car-alt"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">Hotlisted Vehicles</span>
-                                <span class="info-box-number">30</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-red"><i class="fas fa-bullseye"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">Tracking Enabled Vehicles</span>
-                                <span class="info-box-number">410</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="far fa-flag"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-text">Flagged Vehicles</span>
-                                <span class="info-box-number">18</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-md-12">
                         <div class="box box-solid">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Hotlist Vehicle Filter</h3>
+                                <h3 class="box-title">Vehicle Tracking Logs Filter</h3>
                                 <div class="box-tools">
                                     <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fa fa-minus"></i>
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="box-body">
-                                <form>
+                            <form>
+                                <div class="box-body">
                                     <div class="row">
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label id="lblRegNumber">Registration Number</label>
-                                                <input type="text" id="txtRegNumber" placeholder="Registration Number" class="form-control inputmasks">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblcolor">Colour</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Colour</option>
-                                                    <option>All</option>
-                                                    <option value="18">Red</option>
-                                                    <option value="19">Green</option>
-                                                    <option value="20">Black</option>
-                                                    <option value="21">Yellow</option>
-                                                    <option value="22">Grey</option>
-                                                    <option value="26">Magenta</option>
-                                                    <option value="27">Royal Blue</option>
-                                                    <option value="28">White</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblcategory">Category</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Category</option>
-                                                    <option value="1">Wanted</option>
-                                                    <option value="2">Stolen</option>
-                                                    <option value="3">Suspicious</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblmake">Make</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Make</option>
-                                                    <option value="1">Maruti Suzuki</option>
-                                                    <option value="2">Honda</option>
-                                                    <option value="3">Nissan</option>
-                                                    <option value="7">Toyota</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblmodel">Model</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Model</option>
-                                                    <option value="1">2018</option>
-                                                    <option value="2">2017</option>
-                                                    <option value="3">2016</option>
-                                                    <option value="7">2015</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblclass">Class</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Class</option>
-                                                    <option value="1">SUV</option>
-                                                    <option value="2">Car</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblpriority">Priority</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Priority</option>
-                                                    <option value="4">Critical</option>
-                                                    <option value="5">Low</option>
-                                                    <option value="6">Normal</option>
-                                                    <option value="15">High</option>
-                                                    <option value="38">top</option>
-                                                    <option value="43">highest</option>
-                                                    <option value="50">lowest</option>
-                                                    <option value="51">lower</option>
-                                                    <option value="52">less</option>
-                                                    <option value="56">vvv</option>
-                                                    <option value="57">kkk</option>
-                                                    <option value="58">Selecttt</option>
-                                                    <option value="59">higher</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lbltrackingstartdate">Tracking Start Date</label>
-                                                <div class="input-group date">
+                                                <label id="lbllastdetectiondateandtime">Period</label>
+                                                <div class="input-group">
                                                     <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                    <input type="text" id="txttrackingstartdate" placeholder="Tracking Start Date" class="form-control bg-white" readonly="readonly">
+                                                    <input type="text" name="txtlastdetectiondate" placeholder="Choose Date" class="form-control daterangefilter bg-white" readonly="readonly">
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="col-sm-2">
                                             <div class="form-group">
-                                                <label id="lbltrackingenddate">Tracking End Date</label>
-                                                <div class="input-group date">
-                                                    <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                    <input type="text" id="txttrackingenddate" placeholder="Tracking End Date" class="form-control bg-white" readonly="readonly">
-                                                </div>
+                                                <label id="lblcategory">Location</label>
+                                                <select class="form-control select2" style="width: 100%;">
+                                                    <option selected>Select Location</option>
+                                                    <option value="1">All</option>
+                                                    <option value="2">Athwagate</option>
+                                                </select>
                                             </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <label id="lblmake">Status</label>
+                                                <select class="form-control select2" style="width: 100%;">
+                                                    <option selected>Select Status</option>
+                                                    <option value="1">All</option>
+                                                    <option value="2">Detected</option>
+                                                    <option value="3">Accept</option>
+                                                    <option value="7">Reject</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+
+                                            <label class="empty-lbl"></label>
+                                            <button type="button" class="btn btn-default btn-flat">Clear</button>
+                                            <button type="button" class="btn btn-success btn-flat">Search</button>
+
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
-                                                <label id="lbllastdetectiondateandtime">Last Detection Date &amp; Time</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                    <input type="text" name="txtlastdetectiondate" placeholder="Last Detection Date &amp; Time" class="form-control daterangefilter bg-white" readonly="readonly">
-                                                </div>
+                                                <label class="empty-lbl">Display exact vehicle details</label>
+                                                <label class="switch mt-5">
+                                                    <input type="checkbox" checked="">
+                                                    <span class="slider round"></span></label>
                                             </div>
                                         </div>
                                     </div>
 
-
-                                    <div class="box-footer">
-                                        <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                        <button type="button" class="btn btn-success btn-flat">Search</button>
-                                        <button type="submit" class="btn btn-info btn-flat pull-right" data-toggle="modal" data-target="#addVehicle" data-backdrop="static" data-keyboard="false">Add Vehicles</button>
-                                    </div>
-                                </form>
-                            </div>
+                                </div>
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-default btn-flat">Clear</button>
+                                    <button type="button" class="btn btn-success btn-flat">Search</button>
+                                    <button type="submit" class="btn btn-info btn-flat pull-right" data-toggle="modal" data-target="#addVehicle" data-backdrop="static" data-keyboard="false">Add Vehicles</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
