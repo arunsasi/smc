@@ -183,299 +183,106 @@
                                     </button>
                                 </div>
                             </div>
-                            <form>
-                                <div class="box-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label id="lbllastdetectiondateandtime">Period</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                    <input type="text" name="txtlastdetectiondate" placeholder="Choose Date" class="form-control daterangefilter bg-white" readonly="readonly">
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblcategory">Location</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Location</option>
-                                                    <option value="1">All</option>
-                                                    <option value="2">Athwagate</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <label id="lblmake">Status</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Status</option>
-                                                    <option value="1">All</option>
-                                                    <option value="2">Detected</option>
-                                                    <option value="3">Accept</option>
-                                                    <option value="7">Reject</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-
-                                            <label class="empty-lbl"></label>
-                                            <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                            <button type="button" class="btn btn-success btn-flat">Search</button>
-
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label class="empty-lbl">Display exact vehicle details</label>
-                                                <label class="switch mt-5">
-                                                    <input type="checkbox" checked="">
-                                                    <span class="slider round"></span></label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="box-footer">
-                                    <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                    <button type="button" class="btn btn-success btn-flat">Search</button>
-                                    <button type="submit" class="btn btn-info btn-flat pull-right" data-toggle="modal" data-target="#addVehicle" data-backdrop="static" data-keyboard="false">Add Vehicles</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Vehicle -->
-                <div class="modal fade" id="addVehicle" tabindex="-1">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Add Vehicle</h4>
-                            </div>
-                            <div class="modal-body">
+                            <div class="box-body">
                                 <div class="row">
-                                    <div class="col-md-8">
-                                        <form>
-                                            <fieldset>
-                                                <legend>Hotlist Tracking Details</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label class="mr-10">Tracking</label>
-                                                            <label class="switch">
-                                                                <input type="checkbox" checked="">
-                                                                <span class="slider round"></span></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-8">
-                                                        <div class="form-group">
-                                                            <label>
-                                                                Show this vehicle detections seperately on Map
-                                                                <input type="checkbox" class="ml-10">
-                                                            </label>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblRegNumber">Registration Number</label>
-                                                            <input type="text" id="txtRegNumber" placeholder="Registration Number" class="form-control inputmasks">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblcolor">Colour</label>
-                                                            <select class="form-control select2" style="width: 100%;" id="ddlColor">
-                                                                <option selected>Select Colour</option>
-                                                                <option>All</option>
-                                                                <option value="18">Red</option>
-                                                                <option value="19">Green</option>
-                                                                <option value="20">Black</option>
-                                                                <option value="21">Yellow</option>
-                                                                <option value="22">Grey</option>
-                                                                <option value="23">jtyj</option>
-                                                                <option value="24">edwe</option>
-                                                                <option value="25">TEST</option>
-                                                                <option value="26">magenta</option>
-                                                                <option value="27">Royal Blue</option>
-                                                                <option value="28">white</option>
-                                                                <option value="29">sdsfdgfdfgh</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </fieldset>
-
-                                            <fieldset>
-                                                <legend>Other Information</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblmake">Make</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Make</option>
-                                                                <option value="1">Maruti Suzuki</option>
-                                                                <option value="2">Honda</option>
-                                                                <option value="3">Nissan</option>
-                                                                <option value="7">Toyota</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblmodel">Model</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Model</option>
-                                                                <option value="1">2018</option>
-                                                                <option value="2">2017</option>
-                                                                <option value="3">2016</option>
-                                                                <option value="7">2015</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblclass">Class</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Class</option>
-                                                                <option value="1">SUV</option>
-                                                                <option value="2">Car</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblpriority">Priority</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Priority</option>
-                                                                <option value="4">Critical</option>
-                                                                <option value="5">Low</option>
-                                                                <option value="6">Normal</option>
-                                                                <option value="15">High</option>
-                                                                <option value="38">top</option>
-                                                                <option value="43">highest</option>
-                                                                <option value="50">lowest</option>
-                                                                <option value="51">lower</option>
-                                                                <option value="52">less</option>
-                                                                <option value="56">vvv</option>
-                                                                <option value="57">kkk</option>
-                                                                <option value="58">Selecttt</option>
-                                                                <option value="59">higher</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblcategory">Tracking Category</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Category</option>
-                                                                <option value="1">Wanted</option>
-                                                                <option value="2">Stolen</option>
-                                                                <option value="3">Suspicious</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputFile">Upload Reference Image</label>
-                                                            <input type="file" id="exampleInputFile">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-
-                                                        <div class="form-group">
-                                                            <label>Comments</label>
-                                                            <textarea class="form-control" rows="3" placeholder="Enter Comments"></textarea>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </fieldset>
-                                            <fieldset>
-                                                <legend>Hotlist Details (Police DB)</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbltrackingstartdate">Tracking Start Date</label>
-                                                            <div class="input-group date">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" id="txttrackingstartdate" placeholder="Tracking Start Date" class="form-control bg-white" readonly="readonly">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbltrackingenddate">Tracking End Date</label>
-                                                            <div class="input-group date">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" id="txttrackingenddate" placeholder="Tracking End Date" class="form-control bg-white" readonly="readonly">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbllastdetectiondateandtime">Last Detection Date &amp; Time</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" name="txtlastdetectiondate" disabled placeholder="Last Detection Date &amp; Time" class="form-control bg-white">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblpriority">Status</label>
-                                                            <select class="form-control select2" style="width: 100%;">
-                                                                <option selected>Select Status</option>
-                                                                <option value="4">Lost</option>
-                                                                <option value="5">Retrived</option>
-                                                                <option value="6">Invalid</option>
-                                                                <option value="15">Active</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </fieldset>
-
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="well smcmodal">
-                                            <div class="form-group">
-                                                <button type="button" class="btn btn-block btn-warning btn-flat">Verify with RTO</button>
-                                            </div>
-                                            <div class="form-group" id="verifyRTO">
-                                                <input type="text" id="txtClr" disabled="disabled" placeholder="Colour" class="form-control bg-white">
-                                                <input type="text" id="txtClass" disabled="disabled" placeholder="Class" class="form-control bg-white">
-                                                <input type="text" id="txtMaker" disabled="disabled" placeholder="Maker" class="form-control bg-white">
-                                                <input type="text" id="txtModel" disabled="disabled" placeholder="Model" class="form-control bg-white">
-                                                <input type="text" id="txtOwner" disabled="disabled" placeholder="Owner" class="form-control bg-white">
-                                            </div>
-
-                                            <div class="thumbnail">
-                                                <img src="assets/img/DefaultCarImg.png" class="zoomimg">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label id="lbllastdetectiondateandtime">Period</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
+                                                <input type="text" name="txtlastdetectiondate" placeholder="Choose Date" class="form-control daterangefilter bg-white" readonly="readonly">
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label id="lblcategory">Location</label>
+                                            <select class="form-control select2" style="width: 100%;">
+                                                <option selected>Select Location</option>
+                                                <option value="1">All</option>
+                                                <option value="2">Athwagate</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label id="lblmake">Status</label>
+                                            <select class="form-control select2" style="width: 100%;">
+                                                <option selected>Select Status</option>
+                                                <option value="1">All</option>
+                                                <option value="2">Detected</option>
+                                                <option value="3">Accept</option>
+                                                <option value="7">Reject</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+
+                                        <label class="empty-lbl"></label>
+                                        <button type="button" class="btn btn-default btn-flat">Clear</button>
+                                        <button type="button" class="btn btn-success btn-flat">Search</button>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="empty-lbl">Display exact vehicle details</label>
+                                            <label class="switch mt-5">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span></label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success btn-flat">Start Tracking</button>
+                                <div class="box-footer no-padding-left-right">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <table class="table table-bordered tracking-log-table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Registration Number</th>
+                                                        <td>KL 01 EA 0001</td>
+                                                        <th>Class</th>
+                                                        <td>Car</td>
+                                                        <th>Priority</th>
+                                                        <td>Critical</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Color</th>
+                                                        <td>Red</td>
+                                                        <th>Model</th>
+                                                        <td>Swift</td>
+                                                        <th>Category</th>
+                                                        <td>Wanted</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Make</th>
+                                                        <td>Maruti</td>
+                                                        <th>Comments</th>
+                                                        <td>Last tracked 10 days before</td>
+                                                        <th>&nbsp;</th>
+                                                        <td>&nbsp;</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+
+
+
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="thumbnail">
+                                                <img src="assets/img/car1.jpg" class="zoomimg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Edit Vehicle -->
                 <div class="modal fade" id="editVehicle" tabindex="-1">
                     <div class="modal-dialog modal-lg">
@@ -707,626 +514,173 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- View Vehicle -->
-                <div class="modal fade" id="viewVehicle" tabindex="-1">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Vew Vehicle Details</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <form>
-                                            <fieldset>
-                                                <legend>Hotlist Tracking Details</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-4">
-                                                        <div class="form-group">
-                                                            <label class="mr-10">Tracking</label>
-                                                            <label class="switch">
-                                                                <input type="checkbox" checked="">
-                                                                <span class="slider round"></span></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-8">
-                                                        <div class="form-group">
-                                                            <label>
-                                                                Show this vehicle detections seperately on Map
-                                                                <input type="checkbox" class="ml-10">
-                                                            </label>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblRegNumber">Registration Number</label>
-                                                            <input type="text" id="txtRegNumber" placeholder="Registration Number" disabled class="form-control bg-white" value="KL 01 EA 0001">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblcolor">Colour</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;" id="ddlColor">
-                                                                <option value="18" selected>Red</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </fieldset>
-
-                                            <fieldset>
-                                                <legend>Other Information</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblmake">Make</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="1" selected>Maruti Suzuki</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblmodel">Model</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="1" selected>2018</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblclass">Class</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="2" selected>Car</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblpriority">Priority</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="15" selected>High</option>n>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblcategory">Tracking Category</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="1" selected>Wanted</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="exampleInputFile">Upload Reference Image</label>
-                                                            <input type="file" id="exampleInputFile" disabled>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-
-                                                        <div class="form-group">
-                                                            <label>Comments</label>
-                                                            <textarea class="form-control bg-white" rows="3" placeholder="Enter Comments" disabled></textarea>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </fieldset>
-                                            <fieldset>
-                                                <legend>Hotlist Details (Police DB)</legend>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbltrackingstartdate">Tracking Start Date</label>
-                                                            <div class="input-group date">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" id="txttrackingstartdate" placeholder="Tracking Start Date" class="form-control bg-white" value="22/05/2018" disabled>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbltrackingenddate">Tracking End Date</label>
-                                                            <div class="input-group date">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" id="txttrackingenddate" placeholder="Tracking End Date" class="form-control bg-white" value="22/05/2018" disabled>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lbllastdetectiondateandtime">Last Detection Date &amp; Time</label>
-                                                            <div class="input-group">
-                                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                                <input type="text" name="txtlastdetectiondate" placeholder="Last Detection Date &amp; Time" class="form-control bg-white" value="27/03/2019 12:32:05" disabled>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group">
-                                                            <label id="lblpriority">Status</label>
-                                                            <select class="form-control select2 bg-white" disabled style="width: 100%;">
-                                                                <option value="15" selected>Active</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </fieldset>
-
-                                        </form>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="well smcmodal">
-                                            <div class="form-group">
-                                                <button type="button" class="btn btn-block btn-warning btn-flat disabled">Verify with RTO</button>
-                                            </div>
-                                            <div class="form-group" id="verifyRTO">
-                                                <input type="text" id="txtClr" disabled="disabled" placeholder="Colour" class="form-control bg-white">
-                                                <input type="text" id="txtClass" disabled="disabled" placeholder="Class" class="form-control bg-white">
-                                                <input type="text" id="txtMaker" disabled="disabled" placeholder="Maker" class="form-control bg-white">
-                                                <input type="text" id="txtModel" disabled="disabled" placeholder="Model" class="form-control bg-white">
-                                                <input type="text" id="txtOwner" disabled="disabled" placeholder="Owner" class="form-control bg-white">
-                                            </div>
-
-                                            <div class="thumbnail">
-                                                <img src="assets/img/DefaultCarImg.png" class="zoomimg">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Hotlist Vehicles List</h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped table-hover" id="hotlist-vehicles-table">
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th>Registration Number</th>
-                                                <th>Colour</th>
-                                                <th>Class</th>
-                                                <th>Priority</th>
-                                                <th>Category</th>
-                                                <th>Image</th>
-                                                <th>Tracking Start Date</th>
-                                                <th>Tracking End Date</th>
-                                                <th>Last Detected Date</th>
-                                                <th>Tracking</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0001</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>12/04/2019</span></td>
-                                                <td><span>27/03/2019 12:32:05</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
+                        <!-- Custom Tabs -->
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#listView" data-toggle="tab">List View</a></li>
+                                <li><a href="#mapView" data-toggle="tab">Map View</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="listView">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover" id="hotlist-vehicles-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Tracking Order</th>
+                                                    <th>Registration Number</th>
+                                                    <th>Occurrence Time </th>
+                                                    <th>Colour</th>
+                                                    <th>Verification Time</th>
+                                                    <th>Time Duration</th>
+                                                    <th>Location</th>
+                                                    <th>Comments </th>
+                                                    <th class="text-center">Status</th>
+                                                    <th class="text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;dpFskWd7lhg=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>09/04/2019 15:53:40</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span>09/04/2019 15:58:00</span></td>
+                                                    <td><span>11 Days</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"> <a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;NrZLcprQbOU=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>29/03/2019 15:38:14</span></td>
+                                                    <td><i class="fa fa-square"></i> Black</td>
+                                                    <td><span>29/03/2019 17:36:51</span></td>
+                                                    <td><span>21:10 hr</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;zCI7TkSkss4=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 18:27:34</span></td>
+                                                    <td><i class="fa fa-square"></i> Black</td>
+                                                    <td><span>29/03/2019 17:08:39</span></td>
+                                                    <td><span>14 min 13 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;BdMVGN9dH9s=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 18:13:21</span></td>
+                                                    <td><i class="fa fa-square"></i> Black</td>
+                                                    <td><span>29/03/2019 17:08:32</span></td>
+                                                    <td><span>14 min 42 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;qf9tGG4VlZ4=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 17:58:39</span></td>
+                                                    <td><i class="fa fa-square"></i> Black</td>
+                                                    <td><span>29/03/2019 17:08:26</span></td>
+                                                    <td><span>22 min 36 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;6E7zEKFx69w=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 17:36:03</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span>29/03/2019 17:08:19</span></td>
+                                                    <td><span>18 min 21 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;gjRB/ttEp3w=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 17:17:42</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span>28/03/2019 17:10:04</span></td>
+                                                    <td><span>11 min 26 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;l//GwzfcQHY=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 17:06:16</span></td>
+                                                    <td><i class="fa fa-square text-black"></i> Black</td>
+                                                    <td><span>28/03/2019 16:57:51</span></td>
+                                                    <td><span>06 min 43 sec</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;WyYXMyDrS0Q=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 16:59:33</span></td>
+                                                    <td><span></span></td>
+                                                    <td><span>28/03/2019 16:51:24</span></td>
+                                                    <td><span>02:22 hr</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td><a onclick="ProcessTrackPopup(&quot;3&quot;,&quot;Ps94rI7drgc=&quot;)">KL01EA0001</a></td>
+                                                    <td><span>28/03/2019 14:37:15</span></td>
+                                                    <td><i class="fa fa-square"></i> Black</td>
+                                                    <td><span>28/03/2019 16:04:48</span></td>
+                                                    <td><span>20:57 hr</span></td>
+                                                    <td>Athwagate</td>
+                                                    <td></td>
+                                                    <td class="text-center"><i class="fa fa-check-circle" title="Detected"></i></td>
+                                                    <td class="text-center"><a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
-                                                    <a data-toggle="modal" data-target="#viewVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-eye" title="View"></i></a>
-                                                    <a data-toggle="modal" data-target="#editVehicle" data-backdrop="static" data-keyboard="false"><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0002</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:06</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0003</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:06</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0004</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:06</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0005</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:06</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0006</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:07</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0007</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>28/03/2019</span></td>
-                                                <td><span>27/03/2019 12:32:07</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0008</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:08</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0009</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>28/03/2019</span></td>
-                                                <td><span>27/03/2019 12:32:08</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0010</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:09</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0011</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>28/12/2018 10:58:05</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0012</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>28/03/2019</span></td>
-                                                <td><span>27/03/2019 12:32:10</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0013</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>28/12/2018 10:58:05</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0014</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:11</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0015</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>27/03/2019 12:32:12</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0016</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>SUV</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td><span>21/03/2019 13:32:23</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"></td>
-                                                <td>KL 01 EA 0017</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Car</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>20/11/2018</span></td>
-                                                <td><span>08/03/2020</span></td>
-                                                <td></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="fa fa-edit" title="Edit"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                    <a><i class="fas fa-times" title="Delete"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0018</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>suv</td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>25/03/2019</span></td>
-                                                <td><span>25/03/2020</span></td>
-                                                <td><span>07/05/2019 11:38:01</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>KL 01 EA 0019</td>
-                                                <td><i class="fa fa-square text-Black"></i> Black</td>
-                                                <td></td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>25/03/2019</span></td>
-                                                <td><span>25/03/2020</span></td>
-                                                <td><span>07/05/2019 11:37:59</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center"><i class="fa fa-car" data-toggle="tooltip" data-placement="right" title="Police Data"></i></td>
-                                                <td>Kl 01 EA 0020</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td></td>
-                                                <td>Critical</td>
-                                                <td>Wanted</td>
-                                                <td></td>
-                                                <td><span>25/03/2019</span></td>
-                                                <td><span>28/03/2019</span></td>
-                                                <td></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="">
-                                                        <span class="slider round"></span></label> <i class="fas fa-flag text-yellow" data-toggle="tooltip" data-placement="right" title="Flagged"></i></td>
-                                                <td class="action-icons">
-                                                    <a><i class="fa fa-eye" title="View"></i></a>
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    </div>
+
                                 </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="mapView">
+                                    Map View
+                                </div>
+                                <!-- /.tab-pane -->
+
                             </div>
+                            <!-- /.tab-content -->
                         </div>
                     </div>
 
+
                 </div>
+
             </section>
             <!-- /.content -->
         </div>
@@ -1347,9 +701,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="assets/js/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/input-mask/jquery.inputmask.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/fastclick.js"></script>
@@ -1361,16 +713,8 @@
         $(function() {
             //select2
             $('.select2').select2()
-            //Inut Mask
-            $('.inputmasks').inputmask('AA-99-AA-9999', {
-                'placeholder': 'GJ-00-AA-0000'
-            })
-            //Date Picker
-            $('.input-group.date').datepicker({
-                autoclose: true,
-                todayBtn: "linked",
-                format: "dd/mm/yyyy"
-            });
+
+
             //Date range picker
             $('.daterangefilter').daterangepicker({
                 ranges: {

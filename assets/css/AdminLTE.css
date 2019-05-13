@@ -3075,7 +3075,7 @@ a:focus {
 }
 
 .nav-tabs-custom > .nav-tabs > li.active {
-    border-top-color: #3c8dbc;
+    border-top-color: #be0131;
 }
 
 .nav-tabs-custom > .nav-tabs > li.active > a,
@@ -6276,6 +6276,17 @@ legend {
 
 .back-btn-header:hover i {
     color: #be0131;
+}
+
+.box-footer.no-padding-left-right {
+    padding-left: 0;
+    padding-right: 0;
+
+
+}
+
+.tracking-log-table th {
+    background: #f9f9f9;
 }
 
 /*
