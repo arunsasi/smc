@@ -6084,6 +6084,9 @@ table th {
     opacity: 1;
 }
 
+a {
+    cursor: pointer
+}
 
 .switch {
     position: relative;
