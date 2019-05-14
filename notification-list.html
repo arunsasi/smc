@@ -175,32 +175,49 @@
             <section class="content container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box box-solid">
+                        <div class="box box-default box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Notification List Filter</h3>
+                                <div class="box-tools">
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fas fa-filter"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="box-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label id="lbllastdetectiondateandtime">Period</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
-                                                    <input type="text" name="txtlastdetectiondate" placeholder="Choose Date" class="form-control daterangefilternt bg-white" readonly="readonly">
-                                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label id="lbllastdetectiondateandtime">Period</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
+                                                <input type="text" name="txtlastdetectiondate" placeholder="Choose Date" class="form-control daterangefilternt bg-white" readonly="readonly">
                                             </div>
                                         </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label class="empty-lbl"></label>
-                                                <button type="reset" class="btn btn-default btn-flat">Clear</button>
-                                                <button type="button" class="btn btn-success btn-flat">Search</button> </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label class="empty-lbl"></label> <button type="button" class="btn btn-success btn-flat">Search</button>
+                                            <button type="reset" class="btn btn-default btn-flat">Clear</button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
+
                             </div>
-                            <div class="box-footer">
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-default box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Notification List</h3>
+                            </div>
+
+                            <div class="box-body">
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover" id="notification-list-table">
                                         <thead>
@@ -299,11 +316,11 @@
                                 </div>
 
                             </div>
-
                         </div>
 
                     </div>
                 </div>
+
 
                 <!-- Edit Vehicle -->
                 <div class="modal fade" id="editVehicle" tabindex="-1">
@@ -609,7 +626,6 @@
             });
 
         })
-
     </script>
 </body>
 

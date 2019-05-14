@@ -175,9 +175,13 @@
             <section class="content container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box box-solid">
+                        <div class="box box-default box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Audit Trail Filter</h3>
+                                <div class="box-tools">
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fas fa-filter"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="box-body">
                                 <div class="row">
@@ -192,13 +196,24 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label class="empty-lbl"></label>
+                                            <label class="empty-lbl"></label><button type="button" class="btn btn-success btn-flat">Search</button>
                                             <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                            <button type="button" class="btn btn-success btn-flat">Search</button> </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="box-footer">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-default box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Audit Trail</h3>
+                            </div>
+
+                            <div class="box-body">
 
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover" id="vehicle-detection-table">
@@ -357,13 +372,10 @@
                                 </div>
 
                             </div>
-
-
-
                         </div>
-
                     </div>
                 </div>
+
 
 
             </section>
