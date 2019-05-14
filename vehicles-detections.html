@@ -178,6 +178,10 @@
                         <div class="box box-default box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Vehicle Detection Filter</h3>
+                                <div class="box-tools">
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fas fa-filter"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="box-body">
                                 <div class="row">
@@ -247,16 +251,10 @@
                                                 <option value="4">Critical</option>
                                                 <option value="5">Low</option>
                                                 <option value="6">Normal</option>
-                                                <option value="15">High</option>
-                                                <option value="38">top</option>
                                                 <option value="43">highest</option>
                                                 <option value="50">lowest</option>
                                                 <option value="51">lower</option>
                                                 <option value="52">less</option>
-                                                <option value="56">vvv</option>
-                                                <option value="57">kkk</option>
-                                                <option value="58">Selecttt</option>
-                                                <option value="59">higher</option>
                                             </select>
                                         </div>
                                     </div>
@@ -265,8 +263,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
+                                        <button type="button" class="btn btn-success btn-flat">Search</button>
                                         <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                        <button type="button" class="btn btn-success btn-flat">Search</button> </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -279,12 +278,9 @@
                     <div class="col-md-12">
                         <div class="box box-default box-solid">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Vehicle Detection Filter</h3>
+                                <h3 class="box-title">Vehicle Detection List</h3>
                             </div>
                             <div class="box-body">
-
-
-
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover" id="vehicle-detection-table">
                                         <thead>
@@ -549,278 +545,7 @@
                     </div>
                 </div>
 
-                <!--
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Vehicle Detection List</h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped table-hover" id="hotlist-vehicles-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Sl No.</th>
-                                                <th>Registration Number</th>
-                                                <th>Detection Time</th>
-                                                <th>Location</th>
-                                                <th>Colour</th>
-                                                <th>Category</th>
-                                                <th>Priority</th>
-                                                <th>View Tracking Log</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>KL 01 EA 0001</td>
-                                                <td>27/03/2019 12:32:05</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>KL 01 EA 0002</td>
-                                                <td><span>27/03/2019 12:32:06</span></td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>KL 01 EA 0003</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>KL 01 EA 0004</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>KL 01 EA 0005</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>KL 01 EA 0006</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td>KL 01 EA 0007</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td>KL 01 EA 0008</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td>KL 01 EA 0009</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>KL 01 EA 0010</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td>KL 01 EA 0011</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td>KL 01 EA 0012</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>13</td>
-                                                <td>KL 01 EA 0013</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>14</td>
-                                                <td>KL 01 EA 0014</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>15</td>
-                                                <td>KL 01 EA 0015</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>16</td>
-                                                <td>KL 01 EA 0016</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td>KL 01 EA 0017</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-black"></i> Black</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>18</td>
-                                                <td>KL 01 EA 0018</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-red"></i> Red</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>19</td>
-                                                <td>KL 01 EA 0019</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-Black"></i> Black</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>20</td>
-                                                <td>Kl 01 EA 0020</td>
-                                                <td>27/03/2019 12:32:06</td>
-                                                <td>Athwagate</td>
-                                                <td><i class="fa fa-square text-green"></i> Green</td>
-                                                <td>Wanted</td>
-                                                <td>Critical</td>
-                                                <td class="action-icons">
-                                                    <a><i class="far fa-file-alt" title="Tracking Log"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
--->
             </section>
             <!-- /.content -->
         </div>
