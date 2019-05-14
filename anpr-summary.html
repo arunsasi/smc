@@ -131,7 +131,6 @@
             <section class="sidebar">
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-
                     <li class="active treeview menu-open">
                         <a href="#"><i class="fas fa-traffic-light"></i> <span>Traffic Surveillance System</span>
                             <span class="pull-right-container">
@@ -177,9 +176,13 @@
             <section class="content container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box box-solid">
+                        <div class="box box-default box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">ANPR Data Listing</h3>
+                                <div class="box-tools">
+                                    <button type="button" class="btn btn-box-tool btn-flat" data-widget="collapse"><i class="fas fa-filter"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="box-body">
                                 <div class="row">
@@ -227,7 +230,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-1">
+                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             <label class="empty-lbl">Is Hotlisted</label>
                                             <label class="switch mt-5">
@@ -235,17 +238,35 @@
                                                 <span class="slider round"></span></label>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <label class="empty-lbl"></label>
-                                        <button type="button" class="btn btn-default btn-flat">Clear</button>
-                                        <button type="button" class="btn btn-success btn-flat">Search</button>
-                                    </div>
+
 
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-success btn-flat">Search</button>
+                                        <button type="button" class="btn btn-default btn-flat">Clear</button>
 
+                                    </div>
+                                </div>
                             </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-default box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">ANPR Data Listing</h3>
+                            </div>
+
                             <!-- ANPR Hour data-->
-                            <div class="box-footer" id="anprHrData" style="display:block;">
+                            <div class="box-body" id="anprHrData" style="display:block;">
                                 <div class="box box-default box-solid box-in-box">
                                     <div class="box-header">
                                         <h3 class="box-title">Showing latest 10000 hr Data</h3>
@@ -322,12 +343,12 @@
                                 </div>
                             </div>
                             <!-- Location Detail List-->
-                            <div class="box-footer" id="locData" style="display: none;">
+                            <div class="box-body" id="locData" style="display: none;">
                                 <div class="box box-default box-solid box-in-box">
                                     <div class="box-header">
                                         <h3 class="box-title">Location Detail List</h3>
                                         <div class="box-tools pull-right short-tooltip">
-                                            <a href="#" class="back-btn-header showClick" data-html="true" data-toggle="tooltip" data-placement="left" data-original-title="<p class='text-left'>Back to ANAPR Hour Data</p
+                                            <a href="#" class="back-btn-header showClick" data-html="true" data-toggle="tooltip" data-placement="left" data-original-title="<p class='text-left'>Back to ANPR Hour Data</p
                                                 >"><i class="fas fa-caret-square-left"></i></a>
                                         </div>
                                     </div>
@@ -352,9 +373,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:05</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -365,9 +384,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td><span>27/03/2019 12:32:06</span></td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes </td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -378,9 +395,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -391,9 +406,7 @@
                                                 <td><i class="fa fa-square text-black"></i> Black</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -404,9 +417,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -417,9 +428,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -430,9 +439,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -443,9 +450,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No </td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -456,9 +461,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -469,9 +472,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -482,9 +483,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -495,9 +494,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -508,9 +505,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -521,9 +516,7 @@
                                                 <td><i class="fa fa-square text-black"></i> Black</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -534,9 +527,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -547,9 +538,7 @@
                                                 <td><i class="fa fa-square text-black"></i> Black</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -560,9 +549,7 @@
                                                 <td><i class="fa fa-square text-black"></i> Black</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -573,9 +560,7 @@
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -586,9 +571,7 @@
                                                 <td><i class="fa fa-square text-Black"></i> Black</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" checked="" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>Yes</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -599,9 +582,7 @@
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td>Athwagate</td>
                                                 <td>27/03/2019 12:32:06</td>
-                                                <td><label class="switch">
-                                                        <input type="checkbox" disabled>
-                                                        <span class="slider round"></span></label> </td>
+                                                <td>No</td>
                                                 <td class="action-icons">
                                                     <a data-toggle="modal" data-target="#vehicleTracking" data-backdrop="static" data-keyboard="false"><i class="far fa-edit" title="Vehicle Tracking Details"></i></a>
                                                 </td>
@@ -778,22 +759,22 @@
 
                 bFilter: false, //hide search box
                 "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
-                /*'columnDefs': [{
+                'columnDefs': [{
                     'orderable': false,
-                    'targets': 0
+                    'targets': [1, 2]
                 }], // hide sort icon on header of first column
-                'aaSorting': [
+                /* 'aaSorting': [
                     [1, 'asc']
                 ] // start to sort data in second column */
             });
-            // Vehicle Detection
+            // Location Detail List
             $('#location-list-table').dataTable({
 
                 bFilter: false, //hide search box
                 "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
                 'columnDefs': [{
                     'orderable': false,
-                    'targets': 0
+                    'targets': [0, 6]
                 }], // hide sort icon on header of first column
                 'aaSorting': [
                     [1, 'asc']
