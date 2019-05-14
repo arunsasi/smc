@@ -175,7 +175,7 @@
             <section class="content container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="box box-solid">
+                        <div class="box box-default box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Vehicle Detection Filter</h3>
                             </div>
@@ -269,7 +269,21 @@
                                         <button type="button" class="btn btn-success btn-flat">Search</button> </div>
                                 </div>
                             </div>
-                            <div class="box-footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-default box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Vehicle Detection Filter</h3>
+                            </div>
+                            <div class="box-body">
+
+
 
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-striped table-hover" id="vehicle-detection-table">
@@ -531,7 +545,6 @@
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -879,7 +892,7 @@
                 "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
                 'columnDefs': [{
                     'orderable': false,
-                    'targets': 0
+                    'targets': [0, 7]
                 }], // hide sort icon on header of first column
                 'aaSorting': [
                     [1, 'asc']
