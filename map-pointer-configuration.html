@@ -149,8 +149,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="time-configuration.html"><i class="fas fa-clock"></i> Time Configuration</a></li>
-                            <li><a href="map-pointer-configuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                            <li><a href="time-configuration.html"><i class="fas fa-clock"></i> Time Configuration</a></li>
+                            <li class="active"><a href="map-pointer-confihuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
                             <li><a href="#"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
                             <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
                             <li><a href="notification-list.html"><i class="fas fa-bell"></i> Notification List</a></li>
@@ -166,7 +166,7 @@
         <div class="content-wrapper">
             <!-- Content Header-->
             <section class="content-header">
-                <h1>Time Configuration</h1>
+                <h1>Map Pointer Configuration</h1>
             </section>
 
             <!-- Main content -->
@@ -175,33 +175,41 @@
                     <div class="col-md-12">
                         <div class="box box-default box-solid">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Time Configuration</h3>
+                                <h3 class="box-title">Color Configuration</h3>
                             </div>
                             <div class="box-body">
-                                <div class="row" style="display: none" id="timeConfigBox">
+                                <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>Vehicle Detection Time (in Hours)</label>
+                                            <label>Range From</label>
                                             <div class="form-group">
-                                                <input class="form-control" id="txtVehicleDetTime" max="9999999" name="DefaultValue" placeholder="Enter time here" type="number" value="">
+                                                <input class="form-control" max="9999999" name="DefaultValue" placeholder="Enter a value" type="number" value="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>ANPR Summary Time (in Hours)</label>
+                                            <label>Range To</label>
                                             <div class="form-group">
-                                                <input class="form-control" id="txtAnprTime" max="9999999" name="DefaultValue" placeholder="Enter time here" type="number" value="">
+                                                <input class="form-control" max="9999999" name="DefaultValue" placeholder="Enter a value" type="number" value="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>Alert Timeout (in Seconds)</label>
-
-                                            <div class="form-group">
-                                                <input class="form-control" id="txtAlertTime" max="9999999" name="DefaultValue" placeholder="Enter time here" type="number" value="">
-                                            </div>
+                                            <label id="lblcolor">Colour</label>
+                                            <select class="form-control select2" style="width: 100%;" id="ddlColor">
+                                                <option selected>Select Colour</option>
+                                                <option>All</option>
+                                                <option value="18">Red</option>
+                                                <option value="19">Green</option>
+                                                <option value="20">Black</option>
+                                                <option value="21">Yellow</option>
+                                                <option value="22">Grey</option>
+                                                <option value="26">Magenta</option>
+                                                <option value="27">Royal Blue</option>
+                                                <option value="28">White</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
@@ -216,17 +224,23 @@
                                     <table class="table table-bordered table-striped table-hover" id="time-config-table">
                                         <thead>
                                             <tr>
-                                                <th>Vehicle Detection Time (in Hours)</th>
-                                                <th>ANPR Summary Time (in Hours)</th>
-                                                <th>Alert Timeout (in Seconds)</th>
+                                                <th>Range From</th>
+                                                <th>Range To</th>
+                                                <th>Colour</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>10000</td>
-                                                <td>123</td>
-                                                <td>1</td>
+                                                <td>10</td>
+                                                <td>14</td>
+                                                <td><i class="fa fa-square text-green"></i> Green</td>
+                                                <td class="text-center"><a><i class="fas fa-edit" title="Edit" id="editTime"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>12</td>
+                                                <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td class="text-center"><a><i class="fas fa-edit" title="Edit" id="editTime"></i></a></td>
                                             </tr>
                                         </tbody>
@@ -260,6 +274,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
     <script src="assets/js/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
@@ -270,6 +285,9 @@
 
     <script>
         $(function() {
+            //select2
+            $('.select2').select2()
+
             $("#editTime").click(function() {
                 $("#timeConfigBox").show();
             });
@@ -279,11 +297,15 @@
 
                 bFilter: false, //hide search box
                 "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
-                "ordering": false,
+                'columnDefs': [{
+                    'orderable': false,
+                    'targets': [3]
+                }], // hide sort icon on header of first column
+                'aaSorting': [
+                    [1, 'asc']
+                ] // start to sort data in second column 
             });
-
         })
-
     </script>
 </body>
 
