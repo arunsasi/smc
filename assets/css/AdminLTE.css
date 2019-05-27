@@ -6251,9 +6251,16 @@ div.dataTables_wrapper div.dataTables_info {
     border: none;
 }
 
-#verifyRTO input {
-    margin-bottom: 8px;
+#verifyRTO input,
+#verifyRTOView input,
+#verifyRTOEdit input {
+    margin-top: 8px;
 }
+
+.well.smcmodal .form-group {
+    margin-bottom: 0;
+}
+
 
 fieldset {
     margin: 0 0 10px 0;
@@ -6339,6 +6346,36 @@ legend {
 
 .box-in-box .box-header {
     padding: 7px 10px;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.action-icons {
+    display: flex;
+
+}
+
+.action-icons a {
+    margin: 0 3px;
+}
+
+.box-tools .btn-info {
+    color: #ffffff !important;
+}
+
+.box-tools .btn-info:hover,
+.box-tools .btn-info:focus {
+    background-color: #00acd6 !important;
+    border-color: #00acd6 !important;
+}
+
+.nav-tabs-custom.box-default {
+    background: #d2d6de
 }
 
 @media (min-width: 992px) {
