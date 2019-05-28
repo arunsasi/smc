@@ -150,8 +150,8 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="time-configuration.html"><i class="fas fa-clock"></i> Time Configuration</a></li>
-                            <li class="active"><a href="map-pointer-confihuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
-                            <li><a href="dashboard-map-pointer-colour-configuration.html"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
+                            <li><a href="map-pointer-configuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                            <li class="active"><a href="dashboard-map-pointer-colour-configuration%20copy.html"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
                             <li><a href="#"><i class="fas fa-cog"></i> Other Configurations</a></li>
                             <li><a href="notification-list.html"><i class="fas fa-bell"></i> Notification List</a></li>
                         </ul>
@@ -166,11 +166,12 @@
         <div class="content-wrapper">
             <!-- Content Header-->
             <section class="content-header">
-                <h1>Dashboard Map Pointer Colour Configuration</h1>
+                <h1>Map Pointer Colour Configuration</h1>
             </section>
 
             <!-- Main content -->
             <section class="content container-fluid">
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-default box-solid">
@@ -181,18 +182,18 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>Range From</label>
-                                            <div class="form-group">
-                                                <input class="form-control" max="9999999" name="DefaultValue" placeholder="Enter a value" type="number" value="">
-                                            </div>
+                                            <label class="empty-lbl">Flagged Vehicle</label>
+                                            <label class="switch mt-5">
+                                                <input type="checkbox" checked="">
+                                                <span class="slider round"></span></label>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label>Range To</label>
-                                            <div class="form-group">
-                                                <input class="form-control" max="9999999" name="DefaultValue" placeholder="Enter a value" type="number" value="">
-                                            </div>
+                                            <label class="empty-lbl">Hotlist Vehicle</label>
+                                            <label class="switch mt-5">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span></label>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
@@ -221,25 +222,25 @@
                                 </div>
 
                                 <div class="table-responsive">
-                                    <table class="table table-bordered table-striped table-hover" id="map-pointer-config-table">
+                                    <table class="table table-bordered table-striped table-hover" id="dashboard-map-pointer-config-table">
                                         <thead>
                                             <tr>
-                                                <th>Range From</th>
-                                                <th>Range To</th>
+                                                <th>Flagged Vehicle</th>
+                                                <th>Hotlist Vehicle</th>
                                                 <th>Colour</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>10</td>
-                                                <td>14</td>
+                                                <td>True</td>
+                                                <td>True</td>
                                                 <td><i class="fa fa-square text-green"></i> Green</td>
                                                 <td class="text-center"><a><i class="fas fa-edit" title="Edit" id="editTime"></i></a></td>
                                             </tr>
                                             <tr>
-                                                <td>9</td>
-                                                <td>12</td>
+                                                <td>True</td>
+                                                <td>False</td>
                                                 <td><i class="fa fa-square text-red"></i> Red</td>
                                                 <td class="text-center"><a><i class="fas fa-edit" title="Edit" id="editTime"></i></a></td>
                                             </tr>
@@ -254,6 +255,9 @@
 
                     </div>
                 </div>
+
+
+
             </section>
             <!-- /.content -->
         </div>
@@ -286,8 +290,8 @@
             //select2
             $('.select2').select2()
 
-            //Map Pointer Configuration
-            $('#map-pointer-config-table').dataTable({
+            //Dashboard Map Pointer Configuration
+            $('#dashboard-map-pointer-config-table').dataTable({
 
                 bFilter: false, //hide search box
                 "sDom": "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-2'l><'col-sm-3'i><'col-sm-7'p>>", // move filter to bottom
@@ -300,6 +304,7 @@
                 ] // start to sort data in second column 
             });
         })
+
     </script>
 </body>
 
