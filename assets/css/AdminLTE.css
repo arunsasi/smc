@@ -3052,6 +3052,7 @@ a:focus {
 .nav-tabs-custom > .nav-tabs > li > a {
     color: #444;
     border-radius: 0;
+    font-weight: 600;
 }
 
 .nav-tabs-custom > .nav-tabs > li > a.text-muted {
@@ -3122,7 +3123,7 @@ a:focus {
 .nav-tabs-custom > .nav-tabs > li.header {
     line-height: 35px;
     padding: 0 10px;
-    font-size: 20px;
+    font-size: 16px;
     color: #444;
 }
 
