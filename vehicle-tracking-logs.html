@@ -748,13 +748,11 @@
                                             <table class="table table-bordered table-striped matched-list-table ">
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="2">
-
-                                                            <label>Registration Number</label>
-                                                            <input type="text" value="KL 01 EA 0001" class="form-control tracked-number text-orange">
-
-                                                        </td>
                                                         <td colspan="2"><img src="assets/img/number-plate.jpg" class="img-responsive center-block zoomimg"></td>
+                                                        <td colspan="2"> <label>Registration Number</label>
+                                                            <input type="text" value="KL 01 EA 0001" class="form-control tracked-number text-orange">
+                                                        </td>
+
                                                     </tr>
                                                     <tr>
                                                         <td nowrap="nowrap">Incident Type</td>
@@ -772,15 +770,12 @@
 
                                                     <tr>
                                                         <td colspan="4">
-
                                                             <label>Comments</label>
                                                             <textarea class="form-control" rows="3" placeholder="Enter Comments"></textarea>
-
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="4">
-
+                                                        <td colspan="4" class="text-right">
                                                             <button type="button" class="btn btn-default btn-flat"><i class="fa fa-arrow-left"></i> Previous</button>
                                                             <button type="button" class="btn btn-danger btn-flat"><i class="fas fa-times"></i> Reject</button>
                                                             <button type="button" class="btn btn-success btn-flat"><i class="fa fa-check"></i> Accept</button>
@@ -894,8 +889,9 @@
             //Gallery
             jQuery("#gallery").unitegallery({
                 gallery_autoplay: false,
-                gallery_width: 900,
-                gallery_height: 750,
+                gallery_width: 550,
+                gallery_height: 588,
+                slider_scale_mode: "fit",
             });
 
         })
