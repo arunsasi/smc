@@ -129,8 +129,7 @@
             <section class="sidebar">
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu" data-widget="tree">
-
-                    <li class="treeview">
+                    <li class="active treeview  menu-open">
                         <a href="#"><i class="fas fa-traffic-light"></i> <span>Traffic Surveillance System</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -142,22 +141,23 @@
                             <li><a href="vehicles-detections.html"><i class="fas fa-crosshairs"></i> Vehicle Detections</a></li>
                             <li><a href="anpr-summary.html"><i class="fas fa-file-alt"></i> ANPR Summary</a></li>
                             <li><a href="audit-trail.html"><i class="fas fa-file-alt"></i> Audit Trail</a></li>
+                            <li class="active treeview  menu-open">
+                                <a href="#"><i class="fas fa-sliders-h"></i> <span>Configurations</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="time-configuration.html"><i class="fas fa-clock"></i> Time Configuration</a></li>
+                                    <li><a href="map-pointer-configuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
+                                    <li><a href="dashboard-map-pointer-colour-configuration.html"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
+                                    <li><a href="other-configurations.html"><i class="fas fa-cog"></i> Other Configurations</a></li>
+                                    <li class="active"><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                    <li class="active treeview  menu-open">
-                        <a href="#"><i class="fas fa-sliders-h"></i> <span>Configurations</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="time-configuration.html"><i class="fas fa-clock"></i> Time Configuration</a></li>
-                            <li><a href="map-pointer-configuration.html"><i class="fas fa-map-marker"></i> Map Pointer Colour Configuration</a></li>
-                            <li><a href="dashboard-map-pointer-colour-configuration.html"><i class="fas fa-tint"></i> Dashboard Map Pointer Colour Configuration</a></li>
-                            <li><a href="other-configurations.html"><i class="fas fa-cog"></i> Other Configurations</a></li>
-                            <li class="active"><a href="#"><i class="fas fa-bell"></i> Notification List</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>
@@ -626,7 +626,6 @@
             });
 
         })
-
     </script>
 </body>
 

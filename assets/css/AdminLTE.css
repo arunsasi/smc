@@ -3765,7 +3765,7 @@ table.text-center th {
 }
 
 .treeview-menu .treeview-menu {
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .treeview-menu > li {
