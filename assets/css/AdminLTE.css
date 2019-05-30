@@ -6379,6 +6379,26 @@ fieldset[disabled] .form-control {
     background: #d2d6de
 }
 
+.matched-Vnumber {
+    background: #ffffff;
+    padding: 4px 6px;
+    margin-top: -5px;
+    font-size: 16px;
+}
+
+.matched-list-table .text-blue,
+.matched-list-table td {
+    font-weight: 600;
+}
+
+.matched-list-table td textarea {
+    font-weight: normal;
+}
+
+.tracked-number {
+    font-size: 16px;
+}
+
 @media (min-width: 992px) {
     .modal-lg {
         width: 1100px;
