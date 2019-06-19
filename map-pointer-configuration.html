@@ -197,8 +197,8 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label id="lblcolor">Colour</label>
-                                            <select class="form-control select2" style="width: 100%;" id="ddlColor">
-                                                <option selected>Select Colour</option>
+                                            <select class="form-control select2" data-placeholder="Select Colour" style="width: 100%;" id="ddlColor">
+                                                <option></option>
                                                 <option>All</option>
                                                 <option value="18">Red</option>
                                                 <option value="19">Green</option>
@@ -283,7 +283,9 @@
     <script>
         $(function() {
             //select2
-            $('.select2').select2()
+            $('.select2').select2({
+                allowClear: true,
+            });
 
             //Map Pointer Configuration
             $('#map-pointer-config-table').dataTable({
@@ -299,6 +301,7 @@
                 ] // start to sort data in second column 
             });
         })
+
     </script>
 </body>
 

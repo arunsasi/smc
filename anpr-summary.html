@@ -196,8 +196,8 @@
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label id="lblcolor">Colour</label>
-                                            <select class="form-control select2" style="width: 100%;" id="ddlColor">
-                                                <option selected>Select Colour</option>
+                                            <select class="form-control select2" data-placeholder="Select Colour" style="width: 100%;" id="ddlColor">
+                                                <option></option>
                                                 <option>All</option>
                                                 <option value="18">Red</option>
                                                 <option value="19">Green</option>
@@ -213,8 +213,8 @@
                                     <div class="col-sm-2">
                                         <div class="form-group">
                                             <label id="lblmake">Location</label>
-                                            <select class="form-control select2" style="width: 100%;">
-                                                <option selected>Select Location</option>
+                                            <select class="form-control select2" data-placeholder="Select Location" style="width: 100%;">
+                                                <option></option>
                                                 <option value="1">Nanpura</option>
                                                 <option value="2">Sagrampura</option>
                                                 <option value="3">Salabatpura</option>
@@ -712,7 +712,9 @@
     <script>
         $(function() {
             //select2
-            $('.select2').select2()
+            $('.select2').select2({
+                allowClear: true,
+            });
             //Inut Mask
             $('.inputmasks').inputmask('AA-99-AA-9999', {
                 'placeholder': 'GJ-00-AA-0000'

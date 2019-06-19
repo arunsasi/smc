@@ -244,8 +244,8 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label id="lblcolor">Colour</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Colour</option>
+                                                <select class="form-control select2" data-placeholder="Select Colour" style="width: 100%;">
+                                                    <option></option>
                                                     <option value="18">Red</option>
                                                     <option value="19">Green</option>
                                                     <option value="20">Black</option>
@@ -387,8 +387,8 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>Auto Approval Category</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Category</option>
+                                                <select class="form-control select2" data-placeholder="Select Category" style="width: 100%;">
+                                                    <option></option>
                                                     <option value="18">Stolen</option>
                                                     <option value="19">Suspicious</option>
                                                     <option value="20">Wanted</option>
@@ -398,8 +398,8 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label>Auto Approval Priority</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected>Select Priority</option>
+                                                <select class="form-control select2" data-placeholder="Select Priority" style="width: 100%;">
+                                                    <option></option>
                                                     <option value="18">Critical</option>
                                                     <option value="19">Low</option>
                                                     <option value="20">Normal</option>
@@ -490,7 +490,9 @@
     <script>
         $(function() {
             //select2
-            $('.select2').select2()
+            $('.select2').select2({
+                allowClear: true,
+            });
             //color picker with addon
             $('.colorPicker').colorpicker({
                 color: "#cccccc",
