@@ -1862,7 +1862,7 @@ a:focus {
 }
 
 .embed-responsive-100x400px {
-    padding-bottom: 620px;
+    padding-bottom: 430px;
 }
 
 .map-legend-box {
@@ -5277,6 +5277,10 @@ table.text-center th {
  * General: Miscellaneous
  * ----------------------
  */
+table.table-text-vertical-middle tbody td {
+    vertical-align: middle !important;
+}
+
 .pad {
     padding: 10px;
 }
@@ -6019,7 +6023,7 @@ table th {
     color: #444444;
     border-bottom: 1px solid #f4f4f4;
     display: block;
-    padding: 9px 8px;
+    padding: 8.5px 8px;
 }
 
 .recent-critical-updates-list a:hover {
@@ -6064,7 +6068,7 @@ table th {
 }
 
 .recent-hotlist-detection.table {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
 }
 
 .short-tooltip .tooltip-inner {
@@ -6357,8 +6361,7 @@ fieldset[disabled] .form-control {
 }
 
 .action-icons {
-    display: flex;
-
+    display: table-cell;
 }
 
 .action-icons a {
